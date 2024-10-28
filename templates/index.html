@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Pantalla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #4A90E2;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #4A90E2;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        button {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #357ABD;
+        }
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Captura de Pantalla</h1>
+    <img src="{{ url_for('static', filename='screenshot.png') }}"" alt="Screenshot">
+    <form method="GET" action="/">
+        <button type="submit" name="refresh">Recargar Screenshot</button>
+    </form>
+    <a href="/download"><button>Guardar Screenshot</button></a>
+</body>
+</html>
